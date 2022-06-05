@@ -1,0 +1,43 @@
+<app-menu-bar></app-menu-bar>
+<mat-form-field appearance="fill">
+  <mat-label>Default Sort</mat-label>
+  <select matNativeControl required>
+    <option value="asc">ASC</option>
+    <option value="dsc">DSC</option>
+  </select>
+</mat-form-field>
+<!-- <p>items works!</p> -->
+<!-- <mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Large</mat-card-subtitle>
+      <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title-group>
+    <mat-card-content>
+      Test
+    </mat-card-content>
+</mat-card> -->
+<div class="row">
+      <div class="col-md-3" *ngFor="let item of Items">
+        <app-child-items [item]="item"></app-child-items>
+        <!-- <mat-card class="example-card">
+             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"> 
+            <img mat-card-image [src]="imageSrc">
+            <mat-card-content>
+                    <mat-card-title>{{item.title}}</mat-card-title>
+                    <p>{{item.price }}</p>
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-footer>
+                <div style="margin-left: 22px;">
+                    <mat-card-actions >
+                        <button mat-button>LIKE</button>
+                        <button mat-button>SHARE</button>
+                      </mat-card-actions>
+                </div>
+                <div style="height: 20px; background-color:white;border:none black 1px">
+                </div>
+            </mat-card-footer>
+          </mat-card> -->
+      </div>
+</div>
