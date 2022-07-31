@@ -9,6 +9,11 @@ import { ChildItemsModule } from '../child-items/child-items.module';
 import {MatSelectModule} from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule  } from '@angular/material/input';
+import { AuthService } from '../shared/auth/auth.service';
+import { AuthGuard } from '../shared/auth/auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor } from '../shared/auth/jwt.interceptor';
+import { ErrorInterceptor } from '../shared/auth/error.interceptor';
 
 
 @NgModule({
@@ -26,6 +31,7 @@ import { MatInputModule  } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule
   ]
+ 
 
 })
 export class ItemsModule { }
